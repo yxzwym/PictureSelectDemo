@@ -1,0 +1,62 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "cm.cym.PictureSelectDemo"
+        minSdkVersion 17
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        debug {
+            keyAlias 'PictureSelectDemo'
+            keyPassword '123456'
+            storeFile file('../keystore.jks')
+            storePassword '123456'
+        }
+
+        release {
+            keyAlias 'PictureSelectDemo'
+            keyPassword '123456'
+            storeFile file('../keystore.jks')
+            storePassword '123456'
+        }
+    }
+
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                //在这里修改apk文件名，引号内的字符串都可以随便定义
+                outputFileName = "PictureSelectDemo_${defaultConfig.versionName}.apk"
+            }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    // Glide图片加载库
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+}
