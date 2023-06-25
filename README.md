@@ -3,7 +3,7 @@
 
 ### 2021/06/21
 
-<img src="https://raw.githubusercontent.com/AmineTsai/ImgBed/main/2021/Screenshot_20210621_173253.3e22jjzz7so0.jpg" width=300 />
+<img src="https://raw.githubusercontent.com/yxzwym/Blog/main/static/img/2021/Screenshot_20210621_173253.3e22jjzz7so0.jpg" width=300 />
 
 网上的要么是过时的，要么就过于臃肿，甚至自己封装了裁剪类
 
